@@ -5,7 +5,7 @@
   <title>Bootstrap Theme The Band</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/Jarvys.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/Jarvys.css') }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -196,7 +196,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="images/antoine_gosset.jpg" alt="New York" width="1200" height="700">
+        <img src="{{ url_for('static', filename='images/antoine_gosset.jpg') }}" alt="New York" width="1200" height="700">
         <div class="carousel-caption">
           <h2>Jarvys</h2>
           <p>Assistant personalisé</p>
@@ -204,7 +204,7 @@
       </div>
 
       <div class="item">
-        <img src="images/anthea_vivion.jpg" alt="Chicago" width="1200" height="700">
+        <img src="{{ url_for('static', filename='images/anthea_vivion.jpg') }}" alt="Chicago" width="1200" height="700">
         <div class="carousel-caption">
           <h>Jarvys</h2>
           <p>Assistant personalisé</p>
@@ -212,7 +212,7 @@
       </div>
     
       <div class="item">
-        <img src="images/antonin_joulie.jpg" alt="Los Angeles" width="1200" height="700">
+        <img src="{{ url_for('static', filename='images/antonin_joulie.jpg') }}" alt="Los Angeles" width="1200" height="700">
         <div class="carousel-caption">
           <h2>Jarvys</h2>
           <p>Assistant personalisé</p>
@@ -242,7 +242,7 @@
 		<p class="text-left">Pour centraliser toutes vos informations et ainsi vous facilitez la vie. </p>
 	</div>
 	<div class="col-lg-6">
-		<img id="logo" src="images/logo_cut.png" width=48%/>
+		<img id="logo" src="{{ url_for('static', filename='images/logo_cut.png') }}" width=48%/>
 	</div>
 </div>
 
@@ -253,7 +253,7 @@
       <div class="col-xs-12 col-lg-12">
 		<h4>Les fonctionnalités</h4>		  
 		  <div class="col-lg-6">
-			  <img id="iphone" src="images/iphone.png" width=80%/>
+			  <img id="iphone" src="{{ url_for('static', filename='images/iphone.png') }}" width=80%/>
 		  </div>		  
 		  <div class="col-lg-6">		  
         <h3>Feature Description</h3>
@@ -311,45 +311,45 @@
   </div>
   <div class="container ">
     <div class="row">
-      <div class="col-lg-12 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/nicolas_goureau.jpg" data-holder-rendered="true">
+      <div class="col-lg-12 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/nicolas_goureau.jpg') }}" data-holder-rendered="true">
         <h3>Nicolas Goureau</h3>
         <p>Etudiant en ingésup M1, chef de projet,et fondateur de Jarvys</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/mathias_loiret.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/mathias_loiret.jpg') }}" data-holder-rendered="true">
         <h3>Mathias Loiret</h3>
         <p>Etudiant en ingésup M1, chef de projet technique de l'application mobile, et concepteur développeur</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/henry_maisonneuve.jpg"data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/henry_maisonneuve.jpg') }}"data-holder-rendered="true">
         <h3>Henry Maisonneuve</h3>
         <p>Etudiant ingésup B1, développeur concepteur sur l'application mobile</p>
       </div>
 		
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/matthieu_fournier.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/matthieu_fournier.jpg') }}" data-holder-rendered="true">
         <h3>Matthieu Fournier</h3>
         <p>Etudiant en ingésup M1, chef de projet technique de l'intelligence artificielle, et concepteur développeur.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/antoine_gosset.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/antoine_gosset.jpg') }}" data-holder-rendered="true">
         <h3>Antoine Gosset</h3>
         <p>Etudiant en ingésup M1,  concepteur développeur sur l'intelligence artificielle.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/antonin_joulie.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/antonin_joulie.jpg') }}" data-holder-rendered="true">
         <h3>Antonin Joulie</h3>
         <p>Etudiant en ingésup B1,  concepteur développeur sur l'intelligence artificielle.</p>
       </div>
 		
-		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/lise_monfort.jpg" data-holder-rendered="true">
+		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/lise_monfort.jpg') }}" data-holder-rendered="true">
         <h3>Lise Monfort</h3>
         <p>Etudiante en ingésup M1, Maitrise d'ouvrage, Rédactrice en chef et coordinatrice technique.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/corentin_lemarchand.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/corentin_lemarchand.jpg') }}" data-holder-rendered="true">
         <h3>Corentin Lemarchand</h3>
         <p>Etudiant en Limart B1, Designer, concepteur UX/UI, et consultant graphiste.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/anthea_vivion.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/anthea_vivion.jpg') }}" data-holder-rendered="true">
         <h3>Anthea Vivion</h3>
         <p>Etudiant en Limart B1, Designer, concepteur UX/UI, et consultant graphiste.</p>
       </div>
-		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/tanguy_badier.jpg" data-holder-rendered="true">
+		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/tanguy_badier.jpg') }}" data-holder-rendered="true">
 		<h3>Tanguy Badier</h3>
 		<p>Etudiant en ingésup M1,  concepteur développeur de l'application Web</p>
 	  </div>
