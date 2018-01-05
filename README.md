@@ -29,7 +29,17 @@ Install Flask:
 
 <code> pip install flask </code>
 
+
+And Install DeepSpeech :
+
+<code> pip install deepspeech </code>
+
+If you are working with a processor older than Ivy bridge, this may not work. 
+
+You can find instructions on how to install deepseech for older architectures on Mozilla's repo.
+
 You may now browse the repo you just checkout:
+
 
 <code> cd JarvysSiteWeb</code>
 <code>  export FLASK_APP=jarvysSite.py</code>
@@ -52,4 +62,4 @@ For the last one, just change the following file:
     <li> templates/Jarvys2.html    </li>
     <li> static/css/Jarvys.css</li>
  </ul>
-**NB : WHILE CHANGING THE HTML, DON'T FORGET TO SPECIFY STATIC FILES (IMAGES, STYLE, SCRIPTS) USING FLASK DIRECTIVE({{ <code>url_for('static', filename='path_to_my_file/myfile.ext') }}</code> where path_to_my_file is the path reffering to myfile.ext from the static folder)
+**NB : WHILE CHANGING THE HTML, DON'T FORGET TO SPECIFY STATIC FILES (IMAGES, STYLE, SCRIPTS) USING FLASK DIRECTIVE({{ <code>url_for('static', filename='path_to_my_file/myfile.ext') }}</code> where path_to_my_file is the path reffering to myfile.ext from the static folder)**
