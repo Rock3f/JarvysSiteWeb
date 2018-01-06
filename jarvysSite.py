@@ -1,11 +1,10 @@
 from flask import Flask,render_template
-import os
 
+myapp = Flask(__name__)
 
-root_dir = os.path.dirname(os.getcwd())
-app = Flask(__name__,static_url_path=root_dir)
-
-
-@app.route('/')
+@myapp.route('/')
 def hello_world():
-	return render_template('Jarvys2.html')
+	return render_template('Jarvys.html')
+
+if __name__ == "__main__":
+	myapp.run(host='0.0.0.0', port='8080')
