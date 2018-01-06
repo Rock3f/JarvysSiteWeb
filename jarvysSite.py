@@ -1,5 +1,6 @@
 from __future__ import absolute_import, division, print_function
 from flask import Flask,render_template,request
+from textblob import TextBlob
 import os
 
 from deepspeech.model import Model
@@ -31,8 +32,10 @@ def hello_world():
 
 @myapp.route('/upload', methods=['POST'])
 def upload():
-    if 'speech' in request.files:
-        speech = request.files['speech']
-        fs,audio = wav.read(speech)
-        stt = ds.stt(audio, fs)
-    return 'You did upload "' + stt + '"'
+	if 'speech' in request.files:
+		speech = request.files['speech']
+		fs,audio = wav.read(speech)
+		stt = ds.stt(audio, fs)
+		blob = TextBlob(stt)
+		blob = blob.correct().translate(to="fr")
+	return 'You did upload "{0}"'.format(blob)
