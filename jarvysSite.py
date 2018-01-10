@@ -9,6 +9,9 @@ from sys import byteorder
 from array import array
 import scipy.io.wavfile as wav
 
+import subprocess
+
+
 
 BEAM_WIDTH = 500
 LM_WEIGHT = 1.75
@@ -34,7 +37,9 @@ def hello_world():
 def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
-		fs,audio = wav.read(speech)
+		speech.save('tmp/tmp.mp3')
+		subprocess.call(['sox','tmp.mp3','-c 1', '-r 16000','tmp.wav'])
+		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
 		blob = TextBlob(stt)
 		blob = blob.correct().translate(to="fr")
