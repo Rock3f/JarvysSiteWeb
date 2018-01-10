@@ -25,15 +25,15 @@ ds.enableDecoderWithLM("alphabet.txt", 'lm.binary', 'trie' , LM_WEIGHT,
 WORD_COUNT_WEIGHT, VALID_WORD_COUNT_WEIGHT)
 
 root_dir = os.path.dirname(os.getcwd())
-app = Flask(__name__,static_url_path=root_dir)
+myapp = Flask(__name__,static_url_path=root_dir)
 
 
-@app.route('/')
+@myapp.route('/')
 def hello_world():
 	return render_template('Jarvys2.html')
 
 
-@app.route('/upload', methods=['POST'])
+@myapp.route('/upload', methods=['POST'])
 def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
