@@ -1,5 +1,6 @@
 from __future__ import absolute_import, division, print_function
 from flask import Flask,render_template,request
+from flask_cors import CORS
 from textblob import TextBlob
 import os
 
@@ -26,21 +27,28 @@ WORD_COUNT_WEIGHT, VALID_WORD_COUNT_WEIGHT)
 
 root_dir = os.path.dirname(os.getcwd())
 myapp = Flask(__name__,static_url_path=root_dir)
-
+CORS(myapp)
 
 @myapp.route('/')
 def hello_world():
 	return render_template('Jarvys2.html')
 
+@myapp.route('/upload-test', methods=['POST'])
+def uploadTest():
+	return 'You made it'
 
 @myapp.route('/upload', methods=['POST'])
 def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
 		speech.save('tmp/tmp.mp3')
-		subprocess.call(['sox','tmp.mp3','-c 1', '-r 16000','tmp.wav'])
+		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
 		blob = TextBlob(stt)
 		blob = blob.correct().translate(to="fr")
+		print('File Received')
+	else:
+		print('No file')
+		blob = TextBlob('nothing')
 	return 'You did upload "{0}"'.format(blob)
