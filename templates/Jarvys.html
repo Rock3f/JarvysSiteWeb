@@ -5,15 +5,15 @@
   <title>Jarvys, l'assistant intelligent</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/Jarvys.css') }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/Jarvys.css">
-  <link rel="stylesheet" href="css/animate.css">
-	<script src="js/wow.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Jarvys.css') }}">
+  <script src="{{ url_for('static', filename='js/JarvysEvent.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -51,7 +51,7 @@
             </div>
         </div>
 		<div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s" style="visibility: visible; animation-delay:0.5s; animation-name: fadeInDown;">
-            <img id="banniere" src="images/banniere.png"/>
+            <img id="banniere" src="{{ url_for('static', filename='images/banniere.png') }}"/>
         </div>		
 	</div>
 <!-- Container (Jarvys Section) -->
@@ -59,7 +59,7 @@
 	 
 	<h3 class="text-center title">Votre assistant Ynov personnel</h3>	
 	<div class="col-lg-6">
-		<img id="logo" class="text-left wow fadeInDown" data-wow-delay="0.2s" src="images/logo.png"/>
+		<img id="logo" class="text-left wow fadeInDown" data-wow-delay="0.2s" src="{{ url_for('static', filename='images/logo.png') }}"/>
 	</div>
 	<div class="col-lg-6">
 		<p class="text-left">Vous ne savez <span class="fontBold">jamais</span> quel est votre prochain cours ?
@@ -165,45 +165,45 @@
   </div>
   <div class="container ">
     <div class="row">
-      <div class="col-lg-12 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/nicolas_goureau.jpg" data-holder-rendered="true">
+      <div class="col-lg-12 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/nicolas_goureau.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Nicolas Goureau</h3>
         <p style="padding-bottom: 5%;">Etudiant en ingésup M1, chef de projet, et fondateur de Jarvys</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/mathias_loiret.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/mathias_loiret.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Mathias Loiret</h3>
         <p>Etudiant en ingésup M1, chef de projet technique de l'application mobile, et concepteur développeur</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/henry_maisonneuve.jpg"data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/henry_maisonneuve.jpg') }}"data-holder-rendered="true">
         <h3 class="teamName">Henry Maisonneuve</h3>
         <p>Etudiant ingésup B1, développeur concepteur sur l'application mobile</p>
       </div>
 		
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/matthieu_fournier.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/matthieu_fournier.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Matthieu Fournier</h3>
         <p>Etudiant en ingésup M1, chef de projet technique de l'intelligence artificielle, et concepteur développeur.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/antoine_gosset.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/antoine_gosset.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Antoine Gosset</h3>
         <p>Etudiant en ingésup M1,  concepteur développeur sur l'intelligence artificielle.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/antonin_joulie.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/antonin_joulie.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Antonin Joulie</h3>
         <p>Etudiant en ingésup B1,  concepteur développeur sur l'intelligence artificielle.</p>
       </div>
 		
-		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/lise_monfort.jpg" data-holder-rendered="true">
+		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/lise_monfort.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Lise Monfort</h3>
         <p>Etudiante en ingésup M1, Maitrise d'ouvrage, Rédactrice en chef et coordinatrice technique.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/corentin_lemarchand.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/corentin_lemarchand.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Corentin Lemarchand</h3>
         <p>Etudiant en Limart B1, Designer, concepteur UX/UI, et consultant graphiste.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/anthea_vivion.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/anthea_vivion.jpg') }}" data-holder-rendered="true">
         <h3 class="teamName">Anthea Vivion</h3>
         <p>Etudiant en Limart B1, Designer, concepteur UX/UI, et consultant graphiste.</p>
       </div>
-		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/tanguy_badier.jpg" data-holder-rendered="true">
+		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/tanguy_badier.jpg') }}" data-holder-rendered="true">
 		<h3 class="teamName">Tanguy Badier</h3>
 		<p>Etudiant en ingésup M1,  concepteur développeur de l'application Web</p>
 	  </div>
@@ -225,48 +225,6 @@
 	
 	<p>Copyright ©2018 Jarvys Designed by Jarvys Team</p>
 </footer>
-
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-	
-	var $window = $(window);
-
-    if ($window.width() > 767) {
-        new WOW().init();
-    }
-	
-	$(window).scroll( function() { 
-		$('#scrollUp').css("display", "block");
-	});
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, #scrollUp").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-		$('#scrollUp').css("display", "none")
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-</script>
 
 </body>
 </html>
