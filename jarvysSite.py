@@ -40,19 +40,22 @@ def upload():
 		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
-		blob = TextBlob(stt)
+		blob = TextBlob("stt")
 		blob = blob.correct().translate(to="fr")
+		print(request.files)
+		print('file')
 	elif 'speech' in request.values:
 		speech = request.values['speech']
-		with open('tmp/tmp.mp3',"w+") as f:
-			f.write(speech)
 		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
-		blob = TextBlob(stt)
+		blob = TextBlob("no")
 		blob = blob.correct().translate(to="fr")
+		print(request.values)
+		print('values')
 	else:
 		print(request.files)
+		print(request.values)
 		blob = TextBlob("nothing")
 	return 'You did upload "{0}"'.format(blob)
 
