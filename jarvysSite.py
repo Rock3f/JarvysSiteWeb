@@ -36,7 +36,8 @@ def hello_world():
 def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
-		speech.save('tmp/tmp.mp3')
+		speech.save('tmp/tmp.3gp')
+		subprocess.call(['ffmpeg','-i','tmp/tmp.3gp','-c:v','tmp/tmp.mp3'])
 		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
@@ -44,15 +45,6 @@ def upload():
 		blob = blob.correct().translate(to="fr")
 		print(request.files)
 		print('file')
-	elif 'speech' in request.values:
-		speech = request.values['speech']
-		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
-		fs,audio = wav.read('tmp/tmp.wav')
-		stt = ds.stt(audio, fs)
-		blob = TextBlob("no")
-		blob = blob.correct().translate(to="fr")
-		print(request.values)
-		print('values')
 	else:
 		print(request.files)
 		print(request.values)
