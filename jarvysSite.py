@@ -2,9 +2,7 @@ from __future__ import absolute_import, division, print_function
 from flask import Flask,render_template,request
 from flask_cors import CORS
 from textblob import TextBlob
-from flask_cors import CORS
 import os
-
 from deepspeech.model import Model
 
 from sys import byteorder
@@ -27,18 +25,14 @@ ds.enableDecoderWithLM("alphabet.txt", 'lm.binary', 'trie' , LM_WEIGHT,
 WORD_COUNT_WEIGHT, VALID_WORD_COUNT_WEIGHT)
 
 root_dir = os.path.dirname(os.getcwd())
-myapp = Flask(__name__,static_url_path=root_dir)
-CORS(myapp)
+app = Flask(__name__,static_url_path=root_dir)
+CORS(app)
 
-@myapp.route('/')
+@app.route('/')
 def hello_world():
 	return render_template('Jarvys2.html')
 
-@myapp.route('/upload-test', methods=['POST'])
-def uploadTest():
-	return 'You made it'
-
-@myapp.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
@@ -52,3 +46,25 @@ def upload():
 		print(request.files)
 		blob = TextBlob("nothing")
 	return 'You did upload "{0}"'.format(blob)
+
+
+@app.route('/pwa')
+def pwa():
+	return render_template('index.html')
+
+@app.route('/service-worker.js', methods=['GET'])
+def sw():
+    return app.send_static_file('service-worker.js')
+
+@app.route('/index.html', methods=['GET'])
+def index():
+    return app.send_static_file('index.html')
+
+@app.route('/offline.html', methods=['GET'])
+def offline():
+    return app.send_static_file('oui.html')
+
+
+
+if __name__ == "__main__":
+	myapp.run(host='0.0.0.0', port='8080')
