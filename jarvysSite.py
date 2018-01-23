@@ -2,6 +2,7 @@ from __future__ import absolute_import, division, print_function
 from flask import Flask,render_template,request
 from flask_cors import CORS
 from textblob import TextBlob
+from pluginCaller import PluginCaller
 import os
 from deepspeech.model import Model
 
@@ -42,14 +43,14 @@ def upload():
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
 		blob = TextBlob("stt")
-		blob = blob.correct().translate(to="fr")
-		print(request.files)
-		print('file')
+		blob = blob.correct
+		plugins = PluginCaller();
+		return(plugins.execute(blob))
 	else:
 		print(request.files)
 		print(request.values)
-		blob = TextBlob("nothing")
-	return 'You did upload "{0}"'.format(blob)
+		return('There was an error while the upload of your query')
+
 
 
 @app.route('/pwa')
