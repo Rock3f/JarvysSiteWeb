@@ -2,6 +2,7 @@ from __future__ import absolute_import, division, print_function
 from flask import Flask,render_template,request
 from flask_cors import CORS
 from textblob import TextBlob
+from flask_cors import CORS
 import os
 
 from deepspeech.model import Model
@@ -47,8 +48,7 @@ def upload():
 		stt = ds.stt(audio, fs)
 		blob = TextBlob(stt)
 		blob = blob.correct().translate(to="fr")
-		print('File Received')
 	else:
-		print('No file')
-		blob = TextBlob('nothing')
+		print(request.files)
+		blob = TextBlob("nothing")
 	return 'You did upload "{0}"'.format(blob)
