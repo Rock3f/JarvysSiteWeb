@@ -30,7 +30,7 @@ CORS(app)
 
 @app.route('/')
 def hello_world():
-	return render_template('Jarvys2.html')
+	return render_template('Jarvys.html')
 
 @app.route('/upload', methods=['POST'])
 def upload():
