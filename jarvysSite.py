@@ -1,6 +1,6 @@
 from flask import Flask,render_template
 
-myapp = Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
@@ -10,9 +10,18 @@ def hello_world():
 def pwa():
 	return render_template('index.html')
 
-@app.route('/pwa/sw.js', methods=['GET'])
+@app.route('/service-worker.js', methods=['GET'])
 def sw():
-    return app.send_static_file('sw.js')
+    return app.send_static_file('service-worker.js')
+
+@app.route('/index.html', methods=['GET'])
+def index():
+    return app.send_static_file('index.html')
+
+@app.route('/offline.html', methods=['GET'])
+def offline():
+    return app.send_static_file('oui.html')
+
 
 
 if __name__ == "__main__":
