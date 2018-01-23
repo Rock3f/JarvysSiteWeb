@@ -37,14 +37,12 @@ def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
 		speech.save('tmp/tmp.3gp')
-		subprocess.call(['ffmpeg','-i','tmp/tmp.3gp','-c:v','tmp/tmp.mp3'])
+		subprocess.call(['ffmpeg','-i','tmp/tmp.3gp','tmp/tmp.mp3', '-y'])
 		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
-		blob = TextBlob("stt")
+		blob = TextBlob(stt)
 		blob = blob.correct().translate(to="fr")
-		print(request.files)
-		print('file')
 	else:
 		print(request.files)
 		print(request.values)
