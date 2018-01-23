@@ -36,17 +36,17 @@ def hello_world():
 def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
-		speech.save('tmp/tmp.3gp')
-		subprocess.call(['sox','tmp/tmp.3gp','-c 1', '-r 16000','tmp/tmp.wav'])
+		speech.save('tmp/tmp.mp3')
+		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
 		blob = TextBlob(stt)
 		blob = blob.correct().translate(to="fr")
 	elif 'speech' in request.values:
 		speech = request.values['speech']
-		with open('tmp/tmp.3gp',"w+") as f:
+		with open('tmp/tmp.mp3',"w+") as f:
 			f.write(speech)
-		subprocess.call(['sox','tmp/tmp.3gp','-c 1', '-r 16000','tmp/tmp.wav'])
+		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
 		blob = TextBlob(stt)
