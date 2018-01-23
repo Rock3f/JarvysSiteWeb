@@ -44,7 +44,8 @@ def upload():
 		blob = blob.correct().translate(to="fr")
 	elif 'speech' in request.values:
 		speech = request.values['speech']
-		speech.save('tmp/tmp.3gp')
+		with open('tmp/tmp.3gp',"w+") as f:
+			f.write(speech)
 		subprocess.call(['sox','tmp/tmp.3gp','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
