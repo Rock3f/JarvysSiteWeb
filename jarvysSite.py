@@ -47,7 +47,7 @@ def upload():
 		blob = blob.correct
 		plugins = PluginCaller();
 		json = jsonp.loads(plugins.execute(str(blob)))
-		json['sentence'] = stt
+		json['sentence'] = str(blob)
 		return(jsonp.dumps(json))
 	else:
 		print(request.files)
