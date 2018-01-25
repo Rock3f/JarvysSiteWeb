@@ -44,7 +44,7 @@ def upload():
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
 		blob = TextBlob(stt)
-		blob = blob.correct
+		blob = blob.correct()
 		plugins = PluginCaller();
 		json = jsonp.loads(plugins.execute(str(blob)))
 		json['sentence'] = str(blob)
