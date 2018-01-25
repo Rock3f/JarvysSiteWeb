@@ -1,14 +1,19 @@
-	body {
-      font: 400 15px/1.8 Lato, sans-serif;
-      color: #777;
-  }
-  h3, h4 {
+body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+}
+
+p 
+{
+    font-family: Montserrat, sans-serif;
+}
+h3, h4 {
     margin: 10px 0 30px 0;
     letter-spacing: 5px;      
     font-size: 20px;
     color: #111;
-	font-family: Rockwell;	
-	  font-size: 25px !important;
+    font-family: Rockwell;	
+    font-size: 25px !important;
 }
 	  
 	  h5 {
@@ -58,6 +63,11 @@
   .bg-1 {
       background: #2d2d30;
       color: #bdbdbd;
+  }
+
+  .jumbotron {
+      background: white;
+      color: black;
   }
   .bg-1 h3 {color: #fff;}
   .bg-1 p {font-style: italic; padding-bottom: 10%;}
@@ -180,11 +190,11 @@
 		  font-weight: bold;
 	  }
 	  .welcome-thumb {
-    width: 60%;
-    position: absolute;
-    bottom: -50px;
-    right: 85px;
-    z-index: 9;
+        width: 30%;
+    position: relative;
+    margin-left: 84%;    
+    margin-top: -15%;
+    
 }
 	  
   .title {
@@ -225,7 +235,7 @@
 	  }
 	  
 	  #header {
-		  background: url("../images/backgroundHeader.png");
+		  background: #2d2d30;
 		      width: 100%;
 			position: relative;
 			z-index: 1;
@@ -235,7 +245,7 @@
 	  }
 	  
 	  #subtitle {
-		font-family: rockwell;
+		font-family: Montserrat, sans-serif;
     	font-weight: 100;
 		font-style: italic;
 		font-size: 18px;
@@ -270,4 +280,12 @@
     font-family: rockwell;
     color: white;
 	letter-spacing: 10px;
+}
+
+#waves {
+    position: absolute;
+}
+
+.img-circle{
+    
 }
