@@ -5,6 +5,7 @@ from textblob import TextBlob
 from pluginCaller import PluginCaller
 import os
 from deepspeech.model import Model
+import json as jsonp
 
 from sys import byteorder
 from array import array
@@ -45,8 +46,9 @@ def upload():
 		blob = TextBlob(stt)
 		blob = blob.correct
 		plugins = PluginCaller();
-		print(stt)
-		return(plugins.execute(str(blob)))
+		json = jsonp.loads(plugins.execute(str(blob)))
+		json['sentence'] = stt
+		return(jsonp.dumps(json))
 	else:
 		print(request.files)
 		print(request.values)
