@@ -34,7 +34,7 @@ And Install DeepSpeech :
 
 <code> pip install deepspeech </code>
 
-If you are working with a processor older than Ivy bridge, this may not work. 
+If you are working with a processor older than Ivy bridge, this may not work.
 
 You can find instructions on how to install deepseech for older architectures on Mozilla's repo.
 
@@ -43,11 +43,13 @@ You may now browse the repo you just checkout:
 
 <code> cd JarvysSiteWeb</code>
 <code>  export FLASK_APP=jarvysSite.py</code>
+
 <code> flask run</code>
+
 You may now access the web site on **localhost:5000**
 
 ### Tech
- 
+
  While working with Flask on this project you may want to :
  <ul>
     <li> Create a new route</li>
