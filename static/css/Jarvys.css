@@ -4,22 +4,22 @@
   }
   h3, h4 {
     margin: 10px 0 30px 0;
-    letter-spacing: 5px;      
+    letter-spacing: 5px;
     font-size: 20px;
     color: #111;
-	font-family: Rockwell;	
+	font-family: Rockwell;
 	  font-size: 25px !important;
 }
-	  
+
 	  h5 {
     margin: 10px 0 30px 0;
-    letter-spacing: 10px;      
+    letter-spacing: 10px;
     font-size: 20px;
     color: #111;
-	font-family: Rockwell;	
+	font-family: Rockwell;
 	  font-size: 20px !important;
 }
-	  
+
   .container {
       padding: 80px 60px;
   }
@@ -47,14 +47,14 @@
   }
   .carousel-inner img {
       /*-webkit-filter: grayscale(90%);
-      filter: grayscale(90%);  make all photos black and white */ 
+      filter: grayscale(90%);  make all photos black and white */
       width: 25%; /* Set width to 100% */
       margin: auto;
   }
   .carousel-caption h3 {
       color: #fff !important;
-  }	  
-	
+  }
+
   .bg-1 {
       background: #2d2d30;
       color: #bdbdbd;
@@ -124,7 +124,7 @@
       opacity: 0.9;
 	  border-radius: 0;
   }
-  .navbar li a, .navbar .navbar-brand { 
+  .navbar li a, .navbar .navbar-brand {
       color: #d5d5d5 !important;
   }
   .navbar-nav li a:hover {
@@ -157,7 +157,7 @@
     color: #fff;
     opacity: .1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
-		  
+
 }
   footer {
       padding: 32px;
@@ -168,8 +168,8 @@
   footer a:hover {
       color: #777;
       text-decoration: none;
-  }  
-	  
+  }
+
   .h-100 {
 	height: 100%
   }
@@ -186,7 +186,7 @@
     right: 85px;
     z-index: 9;
 }
-	  
+
   .title {
 	padding-top: 5%;
 	padding-bottom: 5%;
@@ -208,7 +208,7 @@
     transition-duration: 800ms;
     margin-bottom: 30px;
 }
-	  
+
   textarea {
       resize: none;
   }
@@ -216,14 +216,14 @@
 		  display: block;
     	margin: 0 auto;
 	  }
-	  
+
 	  #banniere
 	  {
 		  display: block;
     	margin: 0 auto;
 		  width: 100%;
 	  }
-	  
+
 	  #header {
 		  background: url("../images/backgroundHeader.png");
 		      width: 100%;
@@ -233,14 +233,14 @@
 			background-size: cover;
 		    height: 700px;
 	  }
-	  
+
 	  #subtitle {
 		font-family: rockwell;
     	font-weight: 100;
 		font-style: italic;
 		font-size: 18px;
 	  }
-	  
+
 		  #scrollUp {
 		bottom: 0;
 		font-size: 24px;
@@ -252,7 +252,7 @@
 		height: 50px;
 		line-height: 50px;
 	}
-	  
+
 	  #logo {
 		  margin-top: -4%;
 		  width: 47%;
@@ -270,4 +270,87 @@
     font-family: rockwell;
     color: white;
 	letter-spacing: 10px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .card    {
+	 width: 320px;
+    height: 320px;
+  }
+  .card:hover .profile{
+  background: rgba(102,52,105,.7);
+  }
+
+  #mascotteKameRight{
+	display: none;
+  }
+
+  #mascotteKameLeft{
+   display: none;
+  }
+
+	.col-md-6 .card {
+		margin-left: 7%;
+		margin-top: 4%;
+	}
+
+	#iphone {
+		width: 50%;
+		padding-bottom: 10%;
+	}
+
+	#logo {
+	    width: 30%;
+		margin-bottom: 8%;
+	}
+}
+
+@media screen and (min-width: 200px) and (max-width: 991px) {
+  .card    {
+	 width: 320px;
+    height: 320px;
+  }
+  .card:hover .profile{
+  background: rgba(102,52,105,.7);
+  }
+
+  #mascotteKameRight{
+	display: none;
+  }
+
+  #mascotteKameLeft{
+   display: none;
+  }
+
+	.col-md-6 .card {
+		margin-left: 23%;;
+		margin-top: 4%;
+	}
+
+	#waves {
+		display:none;
+	}
+
+	.welcome-thumb {
+		width: 40%;
+		margin-left: 39%;
+		margin-top: 4%;
+	}
+
+
+	#logo {
+	    width: 30%;
+		margin-bottom: 8%;
+	}
+
+	#iphone {
+		width: 50%;
+		padding-bottom: 10%;
+	}
+
+	.container {
+		padding: 80px 0px 0px 10px;
+	}
+
+
 }

@@ -24,7 +24,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#myPage">JARVYS</a>
     </div>
@@ -37,7 +37,7 @@
     </div>
   </div>
 </nav>
-	
+
 	<div id="header" class="container">
 		<div class="container h-100">
             <div class="row h-100 align-items-center">
@@ -52,12 +52,12 @@
         </div>
 		<div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s" style="visibility: visible; animation-delay:0.5s; animation-name: fadeInDown;">
             <img id="banniere" src="{{ url_for('static', filename='images/banniere.png') }}"/>
-        </div>		
+        </div>
 	</div>
 <!-- Container (Jarvys Section) -->
 <div id="Jarvys" class="container text-center">
-	 
-	<h3 class="text-center title">Votre assistant Ynov personnel</h3>	
+
+	<h3 class="text-center title">Votre assistant Ynov personnel</h3>
 	<div class="col-lg-6">
 		<img id="logo" class="text-left wow fadeInDown" data-wow-delay="0.2s" src="{{ url_for('static', filename='images/logo.png') }}"/>
 	</div>
@@ -65,8 +65,8 @@
 		<p class="text-left">Vous ne savez <span class="fontBold">jamais</span> quel est votre prochain cours ?
 		<span class="fontBold">Marre</span> de devoir vous connecter à la fois sur votre boite mail et hyperplanning ? Jarvys se propose de devenir votre <span class="fontBold">assistant personnel</span> pour vous aider à organiser votre vie d'étudiant YNOV. Accédez à votre emploi du temps, vos absences, notes ou boite mail YNOV vial commande vocale. Pour centraliser toutes vos informations et ainsi vous facilitez la vie. </p>
 	</div>
-	
-	<h3 class="text-center title title2">Pourquoi l'utiliser ?</h3>	
+
+	<h3 class="text-center title title2">Pourquoi l'utiliser ?</h3>
 	<div class="col-12 col-md-4">
 		<div class="single-special text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
 			<div class="single-icon">
@@ -94,22 +94,22 @@
 			<p>Plus besoin de se connecter sur toutes les plateformes</p>
 		</div>
 	</div>
-	
-	
+
+
 </div>
 
 <!-- Container (Feature Section) -->
 <div id="features" class="bg-1">
-	<div class="container contentAfter">    
+	<div class="container contentAfter">
     <div class="row">
       <div class="col-xs-12 col-lg-12">
-		<h4>Fonctionnalités</h4>		  
+		<h4>Fonctionnalités</h4>
 		  <div class="col-lg-6">
 			  <img id="iphone" src="{{ url_for('static', filename='images/iphone.png') }}" width=80%/>
-		  </div>		  
-		  <div class="col-lg-6">		  
+		  </div>
+		  <div class="col-lg-6">
         <h5 class="colorWhite">Hyperplanning</h5>
-        <p> Vous pouvez demander à Jarvys d'afficher toutes les informations concernant Hyperplanning, que ce soit l'affichage des cours, du relevé de notes, des absences et des retards. </p>    
+        <p> Vous pouvez demander à Jarvys d'afficher toutes les informations concernant Hyperplanning, que ce soit l'affichage des cours, du relevé de notes, des absences et des retards. </p>
         <h5 class="colorWhite">Slack</h5>
         <p>   Jarvys est capable d'écrire des messages dans les différents canaux choisis par l'utilisateur, d'écrire des messages privés aux personnes de votre choix, et de lire des nouveaux messages.</p>
         <h5 class="colorWhite">Requête Google</h5>
@@ -120,7 +120,7 @@
       </div>
     </div>
   </div>
-  
+
 <div id="Testimonials" class="container text-center">
 	<div class="row">
       <div class="col-lg-12 page-header text-center">
@@ -153,64 +153,126 @@
 	</div>
 	<!-- Container (Screenshot Section) -->
 <div id="Screenshot" class="container text-center">
-	 
+
 	<h3 class="text-center title">Screenshot Application</h3>
-	
-</div>
-	<div id="team" class="jumbotron bg-1">
-	<div class="row">
-    <div class="col-lg-12 text-center">
-      <h3 class="subTitle">YDAYS TEAM</h3>
+
+  <div id="team" class="jumbotron .bg-2">
+  	<div class="row">
+      <div class="col-lg-12 text-center">
+        <h3 class="subTitle">YDAYS TEAM</h3>
+      </div>
     </div>
-  </div>
-  <div class="container ">
-    <div class="row">
-      <div class="col-lg-12 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/nicolas_goureau.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Nicolas Goureau</h3>
-        <p style="padding-bottom: 5%;">Etudiant en ingésup M1, chef de projet, et fondateur de Jarvys</p>
+    <div class="container ">
+
+        <div class="row">
+            <div class="col-lg-3">
+                <img id="mascotteKameLeft" src="images/mascotte-kamehameha.gif" width="130%"/>
+            </div>
+              <div class="col-lg-3 col-md-6 col-sd-12">
+              <div id="cardNicolas" class="card cardMiddleLeft">
+                    <div class="avatar" id="avatarNicolas"></div>
+                    <div class="profile">
+                      <h2>Nicolas Goureau</h2>
+                      <h3>Chef de projet</h3>
+                    </div>
+                  </div>
+                </div>
+              <div class="col-lg-3 col-md-6 col-sd-12">
+                <div id="cardTanguy" class="card">
+                  <div class="avatar" id="avatarTanguy"></div>
+                  <div class="profile">
+                    <h2>Tanguy Badier</h2>
+                    <h3>Intégrateur Web</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                  <img  id="mascotteKameRight" src="images/mascotte-kamehameha.gif" width="130%"/>
+              </div>
+          </div>
+
+        <div class="row paddingCard">
+          <div class="col-lg-3 col-md-6 col-sd-12">
+            <div id="cardLise" class="card cardLeft">
+                <div class="avatar" id="avatarLise"></div>
+                <div class="profile">
+                  <h2>Lise Monfort</h2>
+                  <h3>MOA</h3>
+                </div>
+            </div>
+          </div>
+            <div class="col-lg-3 col-md-6 col-sd-12">
+            <div id="cardAntonin" class="card cardMiddleLeft">
+                  <div class="avatar" id="avatarAntonin"></div>
+                  <div class="profile">
+                    <h2>Antonin Joulie</h2>
+                    <h3>Développeur Python</h3>
+                  </div>
+                </div>
+              </div>
+            <div class="col-lg-3 col-md-6 col-sd-12">
+              <div id="cardMathieu" class="card cardMiddleRight">
+                <div class="avatar" id="avatarMathieu"></div>
+                <div class="profile">
+                  <h2>Matthieu Fournier</h2>
+                  <h3>Développeur Python</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sd-12">
+              <div id="cardAntoine" class="card cardRight">
+                <div class="avatar" id="avatarAntoine"></div>
+                <div class="profile">
+                  <h2>Antoine Gosset</h2>
+                  <h3>Développeur Python</h3>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row paddingCard">
+          <div class="col-lg-3 col-md-6 col-sd-12">
+            <div id="cardHenry" class="card cardLeft">
+                <div class="avatar" id="avatarHenry"></div>
+                <div class="profile">
+                  <h2>Henry Maisonneuve</h2>
+                  <h3>Développeur mobile</h3>
+                </div>
+            </div>
+          </div>
+            <div class="col-lg-3 col-md-6 col-sd-12">
+            <div id="cardMathias" class="card cardMiddleLeft">
+                  <div class="avatar" id="avatarMathias"></div>
+                  <div class="profile">
+                    <h2>Mathias Loiret</h2>
+                    <h3>Développeur mobile</h3>
+                  </div>
+                </div>
+              </div>
+            <div class="col-lg-3 col-md-6 col-sd-12">
+              <div id="cardCorentin" class="card cardMiddleRight">
+                <div class="avatar" id="avatarCorentin"></div>
+                <div class="profile">
+                  <h2>Corentin Lemarchand</h2>
+                  <h3>Designer</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sd-12">
+              <div id="cardAnthea" class="card cardRight">
+                <div class="avatar" id="avatarAnthea"></div>
+                <div class="profile">
+                  <h2>Anthea Vivion</h2>
+                  <h3>Designer</h3>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/mathias_loiret.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Mathias Loiret</h3>
-        <p>Etudiant en ingésup M1, chef de projet technique de l'application mobile, et concepteur développeur</p>
-      </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/henry_maisonneuve.jpg') }}"data-holder-rendered="true">
-        <h3 class="teamName">Henry Maisonneuve</h3>
-        <p>Etudiant ingésup B1, développeur concepteur sur l'application mobile</p>
-      </div>
-		
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/matthieu_fournier.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Matthieu Fournier</h3>
-        <p>Etudiant en ingésup M1, chef de projet technique de l'intelligence artificielle, et concepteur développeur.</p>
-      </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/antoine_gosset.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Antoine Gosset</h3>
-        <p>Etudiant en ingésup M1,  concepteur développeur sur l'intelligence artificielle.</p>
-      </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/antonin_joulie.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Antonin Joulie</h3>
-        <p>Etudiant en ingésup B1,  concepteur développeur sur l'intelligence artificielle.</p>
-      </div>
-		
-		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/lise_monfort.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Lise Monfort</h3>
-        <p>Etudiante en ingésup M1, Maitrise d'ouvrage, Rédactrice en chef et coordinatrice technique.</p>
-      </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/corentin_lemarchand.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Corentin Lemarchand</h3>
-        <p>Etudiant en Limart B1, Designer, concepteur UX/UI, et consultant graphiste.</p>
-      </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/anthea_vivion.jpg') }}" data-holder-rendered="true">
-        <h3 class="teamName">Anthea Vivion</h3>
-        <p>Etudiant en Limart B1, Designer, concepteur UX/UI, et consultant graphiste.</p>
-      </div>
-		<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{{ url_for('static', filename='images/tanguy_badier.jpg') }}" data-holder-rendered="true">
-		<h3 class="teamName">Tanguy Badier</h3>
-		<p>Etudiant en ingésup M1,  concepteur développeur de l'application Web</p>
-	  </div>
-    </div>
-   
-  </div>
-		</div>
+
+
+
+  		</div>
 
 <!-- Footer -->
 <footer class="text-center">
@@ -219,10 +281,10 @@
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
   <h3>JARVYS</h3>
-	
+
 	<a class="btn awesomeBtn" href="mailto:nicolas.goureau@ynov.com"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
 	<a class="btn awesomeBtn" href="https://github.com/Jarvys-Ynov"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-	
+
 	<p>Copyright ©2018 Jarvys Designed by Jarvys Team</p>
 </footer>
 
