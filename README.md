@@ -40,8 +40,8 @@ You can find instructions on how to install deepseech for older architectures on
 
 You may now browse the repo you just checkout:
 
-
 <code> cd JarvysSiteWeb</code>
+
 <code>  export FLASK_APP=jarvysSite.py</code>
 
 <code> flask run</code>

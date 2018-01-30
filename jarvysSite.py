@@ -1,10 +1,11 @@
 from __future__ import absolute_import, division, print_function
 from flask import Flask,render_template,request
-from textblob import TextBlob
 from flask_cors import CORS
+from textblob import TextBlob
+from pluginCaller import PluginCaller
 import os
-
 from deepspeech.model import Model
+import json as jsonp
 
 from sys import byteorder
 from array import array
@@ -26,28 +27,35 @@ ds.enableDecoderWithLM("alphabet.txt", 'lm.binary', 'trie' , LM_WEIGHT,
 WORD_COUNT_WEIGHT, VALID_WORD_COUNT_WEIGHT)
 
 root_dir = os.path.dirname(os.getcwd())
-myapp = Flask(__name__,static_url_path=root_dir)
-CORS(myapp)
+app = Flask(__name__,static_url_path=root_dir)
+CORS(app)
 
-@myapp.route('/')
+@app.route('/')
 def hello_world():
 	return render_template('Jarvys.html')
 
 
-@myapp.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload():
 	if 'speech' in request.files:
 		speech = request.files['speech']
-		speech.save('tmp/tmp.mp3')
-		subprocess.call(['sox','tmp.mp3','-c 1', '-r 16000','tmp.wav'])
+		speech.save('tmp/tmp.3gp')
+		subprocess.call(['ffmpeg','-i','tmp/tmp.3gp','tmp/tmp.mp3', '-y','-loglevel', 'error'])
+		subprocess.call(['sox','tmp/tmp.mp3','-c 1', '-r 16000','tmp/tmp.wav'])
 		fs,audio = wav.read('tmp/tmp.wav')
 		stt = ds.stt(audio, fs)
 		blob = TextBlob(stt)
-		blob = blob.correct().translate(to="fr")
+		blob = blob.correct()
+		plugins = PluginCaller();
+		json = jsonp.loads(plugins.execute(str(blob)))
+		json['sentence'] = str(blob)
+		return(jsonp.dumps(json))
 	else:
 		print(request.files)
-		blob = TextBlob("nothing")
-	return 'You did upload "{0}"'.format(blob)
+		print(request.values)
+		return('There was an error while the upload of your query')
+
+
 
 @app.route('/pwa')
 def pwa():
