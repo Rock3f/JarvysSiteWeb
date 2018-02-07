@@ -282,6 +282,90 @@ h3, h4 {
 	letter-spacing: 10px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .card    {
+       width: 320px;
+      height: 320px;
+    }
+    .card:hover .profile{
+    background: rgba(102,52,105,.7);
+    }
+  
+    #mascotteKameRight{
+      display: none;
+    }
+  
+    #mascotteKameLeft{
+     display: none;
+    }
+  
+      .col-md-6 .card {
+          margin-left: 7%;
+          margin-top: 4%;
+      }
+  
+      #iphone {
+          width: 50%;
+          padding-bottom: 10%;
+      }
+  
+      #logo {
+          width: 30%;
+          margin-bottom: 8%;
+      }
+  }
+  
+  @media screen and (min-width: 200px) and (max-width: 991px) {
+    .card    {
+       width: 320px;
+      height: 320px;
+    }
+    .card:hover .profile{
+    background: rgba(102,52,105,.7);
+    }
+  
+    #mascotteKameRight{
+      display: none;
+    }
+  
+    #mascotteKameLeft{
+     display: none;
+    }
+  
+      .col-md-6 .card {
+          margin-left: 23%;;
+          margin-top: 4%;
+      }
+  
+      #waves {
+          display:none;
+      }
+  
+      .welcome-thumb {
+          width: 40%;
+          margin-left: 39%;
+          margin-top: 4%;
+      }
+  
+  
+      #logo {
+          width: 30%;
+          margin-bottom: 8%;
+      }
+  
+      #iphone {
+          width: 50%;
+          padding-bottom: 10%;
+      }
+  
+      .container {
+          padding: 80px 0px 0px 10px;
+      }
+  
+  
+  }
+  
+
 #waves {
     position: absolute;
 }
