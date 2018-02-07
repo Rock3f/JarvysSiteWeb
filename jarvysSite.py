@@ -2,7 +2,7 @@ from __future__ import absolute_import, division, print_function
 from flask import Flask,render_template,request
 from flask_cors import CORS
 from textblob import TextBlob
-from pluginCaller import PluginCaller
+from client.pluginCaller import PluginCaller
 import os
 from deepspeech.model import Model
 import json as jsonp
@@ -49,6 +49,7 @@ def upload():
 		plugins = PluginCaller();
 		json = jsonp.loads(plugins.execute(str(blob)))
 		json['sentence'] = str(blob)
+		print(str(blob))
 		return(jsonp.dumps(json))
 	else:
 		print(request.files)
