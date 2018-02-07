@@ -1,26 +1,26 @@
 .paddingCard {
     margin-top: 2%;
   }
-  
+
   .cardRight {
     margin-left: 30%;
   }
-  
-  
+
+
   .cardLeft {
     margin-left: -60%;
   }
-  
+
   .cardMiddleLeft {
     margin-left: -30%;
   }
-  
+
   .item{
     margin-right: 20%;
   }
   .card {
     background-size:cover !important;
-    background-position:center center !important;  
+    background-position:center center !important;
     position: relative;
     overflow:hidden;
     text-align:center;
@@ -28,176 +28,176 @@
     height:500px;
     transition: all .4s cubic-bezier(.37,.26,.35,1)
   }
-  
+
   #cardLise {
-    
-    background: url("{{ url_for('static', filename='{{ url_for('static', filename='../images/oiseau.png') }}");
-    
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+
+    background: url("../images/oiseau.png");
+
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
-    
+
   }
-  
+
   #cardAntonin{
-    background: url("{{ url_for('static', filename='{{ url_for('static', filename='../images/crab.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/crab.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardMathieu{
-    background: url("{{ url_for('static', filename='{{ url_for('static', filename='../images/singe.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/singe.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardAntoine{
-    background: url("{{ url_for('static', filename='../images/screen.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/screen.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardHenry{
-    background: url("{{ url_for('static', filename='../images/salt.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/salt.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardMathias{
-    background: url("{{ url_for('static', filename='../images/dragodinde.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/dragodinde.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardCorentin{
-    background: url("{{ url_for('static', filename='../images/chocobo.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/chocobo.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardAnthea{
-    background: url("{{ url_for('static', filename='../images/cute.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/cute.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardNicolas{
-    background: url("{{ url_for('static', filename='../images/licorne.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/licorne.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
+
   #cardTanguy{
-    background: url("{{ url_for('static', filename='../images/guitare.jpg') }}");
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,1), 
+    background: url("../images/guitare.jpg");
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,1),
       inset 0 0 0 1000px rgba(67,52,109,.6);
   }
-  
-  #cardLise:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardLise:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardAntonin:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardAntonin:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardMathieu:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardMathieu:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardAntoine:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardAntoine:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardHenry:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardHenry:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardMathias:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardMathias:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardCorentin:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardCorentin:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardNicolas:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardNicolas:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  
-  #cardAnthea:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+
+  #cardAnthea:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  #cardTanguy:hover { 
-    box-shadow: 
-      0px 30px 30px -20px rgba(0,0,0,.9), 
+
+  #cardTanguy:hover {
+    box-shadow:
+      0px 30px 30px -20px rgba(0,0,0,.9),
       inset 0 0 0 1000px rgba(67,52,109,.2);
   }
-  
-  
-  
+
+
+
   .card:hover .avatar {
     animation:none;
     box-shadow:0 !important;
-    width:200px; 
+    width:200px;
     height:200px;
   }
-  
+
   .card:hover .profile{
     opacity:1;
     bottom:0;
   }
-  
+
   .profile {
     transition: all .5s cubic-bezier(.37,.26,.35,1);
     opacity:0;
-    position:absolute; 
-    bottom:20px; 
+    position:absolute;
+    bottom:20px;
     width:100%;
   }
-  
+
   .profile h1 {
     color:#fff;
     padding:0;
     margin:0;
   }
-  
+
   .profile h3 {
     color:#fff;
     padding:0;
-    margin:5px 0 40px 0; 
+    margin:5px 0 40px 0;
     font-size:.9em
   }
-  
+
   .avatar {
     transition: all .4s cubic-bezier(.37,.26,.35,1);
     animation: circleAn 4s infinite;
@@ -209,77 +209,77 @@
     background-position:center center !important;
     border-radius:100%;
   }
-  
+
   #avatarLise {
-   
-    background:url("{{ url_for('static', filename='../images/lise_monfort.jpg') }}");
-  
+
+    background:url("../images/lise_monfort.jpg");
+
     box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarAntonin {
-   
-   background:url("{{ url_for('static', filename='../images/antonin_joulie.jpg') }}");
-  
+
+   background:url("../images/antonin_joulie.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarMathieu {
-   
-   background:url("{{ url_for('static', filename='../images/matthieu_fournier.jpg') }}");
-  
+
+   background:url("../images/matthieu_fournier.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarAntoine {
-   
-   background:url("{{ url_for('static', filename='../images/Antoine_Gosset.jpg') }}");
-  
+
+   background:url("../images/antoine_gosset.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarHenry {
-   
-   background:url("{{ url_for('static', filename='../images/henry_maisonneuve.jpg') }}");
-  
+
+   background:url("../images/henry_maisonneuve.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarMathias {
-   
-   background:url("{{ url_for('static', filename='../images/mathias_loiret.jpg') }}");
-  
+
+   background:url("../images/mathias_loiret.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarCorentin {
-   
-   background:url("{{ url_for('static', filename='../images/corentin_lemarchand.jpg') }}");
-   transform: rotate(270deg);
+
+   background:url("../images/corentin_lemarchand.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarAnthea {
-   
-   background:url("{{ url_for('static', filename='../images/anthea_vivion.jpg') }}");
-  
+
+   background:url("../images/anthea_vivion.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarNicolas {
-   
-   background:url("{{ url_for('static', filename='../images/nicolas_goureau.jpg') }}");
-  
+
+   background:url("../images/nicolas_goureau.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #avatarTanguy {
-   
-   background:url("{{ url_for('static', filename='../images/tanguy_badier.jpg') }}");
-  
+
+   background:url("../images/tanguy_badier.jpg");
+
    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
   }
-  
+
   #mascotteKameRight{
     margin-top: 40%;
     margin-left: 24%;
@@ -292,16 +292,16 @@
     margin-left: -47%;
   }
   @keyframes circleAn {
-    0%   { 
+    0%   {
       box-shadow:
-        0px 30px 30px -25px rgba(0,0,0,0.6), 
-        0px 0px 0px 0px rgba(102,52,105,1), 
+        0px 30px 30px -25px rgba(0,0,0,0.6),
+        0px 0px 0px 0px rgba(102,52,105,1),
         0px 0px 0px 0px rgba(102,52,105,.7),
         0px 0px 0px 0px rgba(102,52,105,.5);
     }
-   100% { 
+   100% {
      box-shadow:
-       0px 30px 30px -25px rgba(0,0,0,0.6), 
+       0px 30px 30px -25px rgba(0,0,0,0.6),
        0px 0px 0px 70px rgba(102,52,105,0),
        0px 0px 0px 200px rgba(102,52,105,0),
        0px 0px 0px 300px rgba(102,52,105,0);
