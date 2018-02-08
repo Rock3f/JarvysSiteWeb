@@ -3,7 +3,7 @@
 
 import json
 import requests
-from client.geotext.geotext import GeoText
+from geotext import GeoText
 
 
 class Weather(object):
