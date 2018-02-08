@@ -25,14 +25,10 @@ Then activate this virtualenv:
 
 **If you may work a lot with this you may have to create an alias to make your life easier**
 
-Install Flask:
+Install requirements:
 
-<code> pip install flask </code>
+<code> pip install -r requirements.txt </code>
 
-
-And Install DeepSpeech :
-
-<code> pip install deepspeech </code>
 
 If you are working with a processor older than Ivy bridge, this may not work.
 
