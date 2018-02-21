@@ -48,9 +48,8 @@ def upload():
 		blob = TextBlob(stt)
 		blob = blob.correct()
 		plugins = PluginCaller();
-		json = jsonp.loads(plugins.execute(str(blob)))
+		json = plugins.execute(str(blob))
 		json['sentence'] = str(blob)
-		print(str(blob))
 		return(jsonp.dumps(json))
 	else:
 		print(request.files)
@@ -63,16 +62,16 @@ def upload():
 def upload_text():
 	searchword = request.args.get('query', '')
 	if searchword !='':
-		blob = TextBlob(urllib.unquote(searchword).decode('UTF-8'))
+		oui = urllib.unquote(searchword).decode('UTF-8')
+		print(oui)
+		blob = TextBlob(oui)
 		blob = blob.correct()
 		plugins = PluginCaller();
-		json = jsonp.loads(plugins.execute(str(blob)))
+		json = plugins.execute(str(blob))
 		json['sentence'] = str(blob)
 		print(str(blob))
-		return("jsonp.dumps(json)")
+		return(jsonp.dumps(json))
 	else:
-		print(request.files)
-		print(request.values)
 		return('There was an error while the upload of your query')
 
 
