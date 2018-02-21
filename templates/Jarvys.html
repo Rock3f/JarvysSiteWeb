@@ -14,6 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/Jarvys.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/card.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
   <script src="{{ url_for('static', filename='js/JarvysEvent.js') }}"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
 	<script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
@@ -107,7 +108,7 @@
 <div id="features" class="bg-1">
 	<div class="container">
     <div class="row">
-      <div class="col-xs-12 col-lg-12">
+      <div class="col-xs-12 col-lg-12 marginBotSection ">
 		<h4>Fonctionnalités</h4>
 		  <div class="col-lg-6">
 			  <img id="iphone" src="{{ url_for('static', filename='images/iphone.png') }}" width=80%/>
@@ -242,7 +243,7 @@
       </div>
     </div>
 
-
+    
 
 		</div>
 
@@ -254,7 +255,16 @@
           </a>
         </div>
         <div class="content" id="contentModal">
-
+          <div id="modalGoureau" class="hidden"><div><img class="backgroundModal" src="{{ url_for('static', filename='images/licorne.jpg') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/nicolas_goureau.jpg') }}"/></div><div class="contentModal"> <h3>Nicolas Goureau</h3><p><span class="bold">Son rôle :</span> Nicolas est à l' initiative du projet. Chef de projet, il assure la cohésion et le partage des tâches entre les différentes équipes. </p><p> <span class="bold">Ses passions :</span> Les licornes et le quinoa</p><p><span class="bold">Poisson ascendant Cancer</span>, vous pouvez l'amadouer avec des cookies moelleux.</p></div></div>
+          <div id="modalBadier" class="hidden"><div><img id="backgroundModalTanguy" class="backgroundModal" src="{{ url_for('static', filename='images/guitare.jpg') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/tanguy_badier.jpg') }}"/></div><div class="contentModal"> <h3>Tanguy Badier</h3><p><span class="bold">Son rôle :</span> Tanguy est l'intégrateur web de l'équipe. Il réalise l'ensemble du site web destiné à la présentation de Jarvys. </p><p> <span class="bold">Ses passions :</span> Les cordes et sa magnifique Opel Corsa</p><p><span class="bold">Taureau ascendant Gémeau</span>, Il est corruptible à base de whisky.</p></div></div>
+          <div id="modalMonfort" class="hidden"><div><img id="backgroundModalLise" class="backgroundModal" src="{{ url_for('static', filename='images/oiseau.png') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/lise_monfort.jpg') }}"/></div><div class="contentModal"> <h3>Lise Monfort</h3><p><span class="bold">Son rôle :</span> Lise est notre maitrise d\'ouvrage. Elle réalise la documentation fonctionnelle, et participe à l'élaboration des différentes interfaces utilisateur. </p><p> <span class="bold">Ses passions :</span> l'Opel Corsa de Tanguy et Kog\'Maw monarque</p><p><span class="bold">Cancer ascendant Vierge</span>, elle est facilement attendrie par des images d\'oiseaux.</p></div></div>
+          <div id="modalMaisonneuve" class="hidden"><div><img id="backgroundModalLise" class="backgroundModal" src="{{ url_for('static', filename='images/salt.jpg') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/henry_maisonneuve.jpg') }}"/></div><div class="contentModal"> <h3>Henry Maisonneuve</h3><p><span class="bold">Son rôle :</span> Henry est un concepteur développeur IONIC. Il s'occupe de la réalisation de l'application mobile. </p><p> <span class="bold">Ses passions :</span> Mathias et Monster Hunter World</p><p><span class="bold">Verseau ascendant Vierge</span>, plus facile à trigger qu'une féministe.</p></div></div>
+          <div id="modalLoiret" class="hidden"><div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for('static', filename='images/dragodinde.jpg') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/mathias_loiret.jpg') }}"/></div><div class="contentModal" id="contentModalMathias"> <h3>Mathias Loiret</h3><p><span class="bold">Son rôle :</span> Mathias est un concepteur développeur IONIC. Il s'occupe de la réalisation de l'application mobile. </p><p> <span class="bold">Ses passions :</span> Henry et la trotinette électrique</p><p><span class="bold">Taureau ascendant Cancer</span>, inconditionel du Quinoa.</p></div></div>
+          <div id="modalLeMarchand" class="hidden"><div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for('static', filename='images/chocobo.jpg') }}"/> <img class="profileModal" id="imageCorentinModal" src="{{ url_for('static', filename='images/corentin_lemarchand.jpg') }}"/></div><div class="contentModal" id="contentModalCorentin"> <h3>Corentin Lemarchand</h3><p><span class="bold">Son rôle :</span> Corentin est un graphiste et designer. Il s'occupe de la réalisation des différents visuels, images, et icônes. </p><p> <span class="bold">Ses passions :</span> Le coloriage et Dofus</p><p><span class="bold">Poisson ascendant Cancer</span>, déteste les pédiluves.</p></div></div>
+          <div id="modalJoulie" class="hidden"><div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for('static', filename='images/crab.jpg') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/antonin_joulie.jpg') }}"/></div><div class="contentModal"> <h3>Antonin Joulie</h3><p><span class="bold">Son rôle :</span> Antonin est un développeur concepteur Python. Il s'occupe de la réalisation de l'ensemble du back de l'application. </p><p> <span class="bold">Ses passions :</span> les collines et le roller</p><p><span class="bold">Scorpion ascendant Balance</span>, il connaît le chemin</p></div></div>
+          <div id="modalFournier"class="hidden"><div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for('static', filename='images/singe.jpg') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/matthieu_fournier.jpg') }}"/></div><div class="contentModal"> <h3>Matthieu Fournier</h3><p><span class="bold">Son rôle :</span> Matthieu est un développeur concepteur Python. Il s'occupe de la réalisation de l'ensemble du back de l'application. </p><p> <span class="bold">Ses passions :</span> briser des coeurs et le jour du seigneur</p><p><span class="bold">Gémeaux ascendant Lion</span>, il se blesse dans sa confusion</p></div></div>
+          <div id="modalVivion" class="hidden"><div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for('static', filename='images/cute.jpg') }}"/> <img class="profileModal" id="imageCorentinModal" src="{{ url_for('static', filename='images/anthea_vivion.jpg') }}"/></div><div class="contentModal" id="contentModalCorentin"> <h3>Anthea Vivion</h3><p><span class="bold">Son rôle :</span> Anthea est une graphiste et designer. Elle s'occupe de la réalisation des différents visuels, images, et icônes. </p><p> <span class="bold">Ses passions :</span> les labradors et Yves Saint Laurent </p><p><span class="bold">??</span>, en fait, on sait pas trop.</p></div></div>
+          <div id="modalGosset" class="hidden"><div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for('static', filename='images/screen.jpg') }}"/> <img class="profileModal" src="{{ url_for('static', filename='images/antoine_gosset.jpg') }}"/></div><div class="contentModal"> <h3>Antoine Gosset</h3><p><span class="bold">Son rôle :</span> Antoine est un développeur concepteur Python. Il s'occupe de la réalisation de l'ensemble du back de l'application. </p><p> <span class="bold">Ses passions :</span> Le riz/dinde et pousser à la salle.</p><p><span class="bold">Poisson ascendant ?</span>, rageux de base</p></div></div>
         </div>
       </div>
     </div>

@@ -1,0 +1,7 @@
+*.pyc
+tmp*
+tmp/*
+lm.binary
+trie
+alphabet.txt
+*.pb
