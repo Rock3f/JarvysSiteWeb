@@ -111,47 +111,48 @@ $(document).ready(function(){
     $('#footer').toggleClass('hidden');
     $('#features').toggleClass('blur-it');
     $('.navbar').toggleClass('hidden');
+    $('#scrollUp').toggleClass('hidden');
     $('body').toggleClass('overflowHide')
  });
 
   $('#cardNicolas').click(function() {
-    $('#contentModal').html(nicolasDes);
+    $('#modalGoureau').removeClass('hidden');
   })
 
   $('#cardTanguy').click(function() {
-    $('#contentModal').html(tanguyDes);
+    $('#modalBadier').removeClass('hidden');
   })
 
   $('#cardLise').click(function() {
-    $('#contentModal').html(liseDes);
+    $('#modalMonfort').removeClass('hidden');
   })
 
   $('#cardHenry').click(function() {
-    $('#contentModal').html(henryDes);
+    $('#modalMaisonneuve').removeClass('hidden');
   })
 
   $('#cardMathias').click(function() {
-    $('#contentModal').html(mathiasDes);
+    $('#modalLoiret').removeClass('hidden');
   })
 
   $('#cardCorentin').click(function() {
-    $('#contentModal').html(corentinDes);
+    $('#modalLeMarchand').removeClass('hidden');
   })
 
   $('#cardAntonin').click(function() {
-    $('#contentModal').html(antoninDes);
+    $('#modalJoulie').removeClass('hidden');
   })
 
   $('#cardMathieu').click(function() {
-    $('#contentModal').html(matthieuDes);
+    $('#modalFournier').removeClass('hidden');
   })
 
   $('#cardAnthea').click(function() {
-    $('#contentModal').html(antheaDes);
+    $('#modalVivion').removeClass('hidden');
   })
 
   $('#cardAntoine').click(function() {
-    $('#contentModal').html(antoineDes);
+    $('#modalGosset').removeClass('hidden');
   })
 
  $('.btn-close').click(function() {
@@ -162,7 +163,48 @@ $(document).ready(function(){
   $('#footer').removeClass('hidden');
   $('#features').removeClass('blur-it');
   $('.navbar').removeClass('hidden');
+  $('#scrollUp').removeClass('hidden');
   $('body').removeClass('overflowHide')
+
+  if(!$('#modalGoureau').hasClass("hidden")){
+    $('#modalGoureau').toggleClass('hidden');
+  }
+
+  if(!$('#modalBadier').hasClass("hidden")){
+    $('#modalBadier').toggleClass('hidden');
+  }
+
+  if(!$('#modalMonfort').hasClass("hidden")){
+    $('#modalMonfort').toggleClass('hidden');
+  }
+
+  if(!$('#modalMaisonneuve').hasClass("hidden")){
+    $('#modalMaisonneuve').toggleClass('hidden');
+  }
+
+  if(!$('#modalLoiret').hasClass("hidden")){
+    $('#modalLoiret').toggleClass('hidden');
+  }
+
+  if(!$('#modalLeMarchand').hasClass("hidden")){
+    $('#modalLeMarchand').toggleClass('hidden');
+  }
+
+  if(!$('#modalJoulie').hasClass("hidden")){
+    $('#modalJoulie').toggleClass('hidden');
+  }
+
+  if(!$('#modalFournier').hasClass("hidden")){
+    $('#modalFournier').toggleClass('hidden');
+  }
+
+  if(!$('#modalVivion').hasClass("hidden")){
+    $('#modalVivion').toggleClass('hidden');
+  }
+
+  if(!$('#modalGosset').hasClass("hidden")){
+    $('#modalGosset').toggleClass('hidden');
+  }
  });
 })
 
@@ -312,14 +354,3 @@ SineWaveGenerator.prototype.loop = function() {
   
   window.requestAnimationFrame(this.loop.bind(this));
 }
-
-var nicolasDes = '<div><img class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/licorne.jpg\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/nicolas_goureau.jpg\') }}"/></div><div class="contentModal"> <h3>Nicolas Goureau</h3><p><span class="bold">Son rôle :</span> Nicolas est à l\' initiative du projet. Chef de projet, il assure la cohésion et le partage des tâches entre les différentes équipes. </p><p> <span class="bold">Ses passions :</span> Les licornes et le quinoa</p><p><span class="bold">Poisson ascendant Cancer</span>, vous pouvez l\'amadouer avec des cookies moelleux.</p></div>';
-var tanguyDes = '<div><img id="backgroundModalTanguy" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/guitare.jpg\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/tanguy_badier.jpg\') }}"/></div><div class="contentModal"> <h3>Tanguy Badier</h3><p><span class="bold">Son rôle :</span> Tanguy est l\'intégrateur web de l\'équipe. Il réalise l\'ensemble du site web destiné à la présentation de Jarvys. </p><p> <span class="bold">Ses passions :</span> Les cordes et sa magnifique Opel Corsa</p><p><span class="bold">Taureau ascendant Gémeau</span>, Il est corruptible à base de whisky.</p></div>';
-var liseDes = '<div><img id="backgroundModalLise" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/oiseau.png\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/lise_monfort.jpg\') }}"/></div><div class="contentModal"> <h3>Lise Monfort</h3><p><span class="bold">Son rôle :</span> Lise est notre maitrise d\'ouvrage. Elle réalise la documentation fonctionnelle, et participe à l\'élaboration des différentes interfaces utilisateur. </p><p> <span class="bold">Ses passions :</span> L\'Opel Corsa de Tanguy et Kog\'Maw monarque</p><p><span class="bold">Cancer ascendant Vierge</span>, elle est facilement attendrie par des images d\'oiseaux.</p></div>';
-var henryDes = '<div><img id="backgroundModalLise" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/salt.jpg\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/henry_maisonneuve.jpg\') }}"/></div><div class="contentModal"> <h3>Henry Maisonneuve</h3><p><span class="bold">Son rôle :</span> Henry est un concepteur développeur IONIC. Il s\'occupe de la réalisation de l\'application mobile. </p><p> <span class="bold">Ses passions :</span> Mathias et Monster Hunter World</p><p><span class="bold">Verseau ascendant Vierge</span>, plus facile à trigger qu\'une féministe.</p></div>';
-var mathiasDes = '<div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/dragodinde.jpg\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/mathias_loiret.jpg\') }}"/></div><div class="contentModal" id="contentModalMathias"> <h3>Mathias Loiret</h3><p><span class="bold">Son rôle :</span> Mathias est un concepteur développeur IONIC. Il s\'occupe de la réalisation de l\'application mobile. </p><p> <span class="bold">Ses passions :</span> Henry et la trotinette électrique</p><p><span class="bold">Taureau ascendant Cancer</span>, inconditionel du Quinoa.</p></div>';
-var corentinDes = '<div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/chocobo.jpg\') }}"/> <img class="profileModal" id="imageCorentinModal" src="{{ url_for(\'static\', filename=\'images/corentin_lemarchand.jpg\') }}"/></div><div class="contentModal" id="contentModalCorentin"> <h3>Corentin Lemarchand</h3><p><span class="bold">Son rôle :</span> Corentin est un graphiste et designer. Il s\'occupe de la réalisation des différents visuels, images, et icônes. </p><p> <span class="bold">Ses passions :</span> Le coloriage et Dofus</p><p><span class="bold">Poisson ascendant Cancer</span>, déteste les pédiluves.</p></div>';
-var antoninDes  = '<div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/crab.jpg\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/antonin_joulie.jpg\') }}"/></div><div class="contentModal"> <h3>Antonin Joulie</h3><p><span class="bold">Son rôle :</span> Antonin est un développeur concepteur Python. Il s\'occupe de la réalisation de l\'ensemble du back de l\'application. </p><p> <span class="bold">Ses passions :</span> les collines et le roller</p><p><span class="bold">Scorpion ascendant Balance</span>, il connaît le chemin</p></div>';
-var matthieuDes  = '<div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/singe.jpg\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/matthieu_fournier.jpg\') }}"/></div><div class="contentModal"> <h3>Matthieu Fournier</h3><p><span class="bold">Son rôle :</span> Matthieu est un développeur concepteur Python. Il s\'occupe de la réalisation de l\'ensemble du back de l\'application. </p><p> <span class="bold">Ses passions :</span> briser des coeurs et le jour du seigneur</p><p><span class="bold">Gémeaux ascendant Lion</span>, il se blesse dans sa confusion</p></div>';
-var antheaDes = '<div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/cute.jpg\') }}"/> <img class="profileModal" id="imageCorentinModal" src="{{ url_for(\'static\', filename=\'images/anthea_vivion.jpg\') }}"/></div><div class="contentModal" id="contentModalCorentin"> <h3>Anthea Vivion</h3><p><span class="bold">Son rôle :</span> Anthea est une graphiste et designer. Elle s\'occupe de la réalisation des différents visuels, images, et icônes. </p><p> <span class="bold">Ses passions :</span> les labradors et Yves Saint Laurent </p><p><span class="bold">??</span>, en fait, on sait pas trop.</p></div>';
-var antoineDes  = '<div><img id="backgroundModalMathias" class="backgroundModal" src="{{ url_for(\'static\', filename=\'images/screen.jpg\') }}"/> <img class="profileModal" src="{{ url_for(\'static\', filename=\'images/antoine_gosset.jpg\') }}"/></div><div class="contentModal"> <h3>Antoine Gosset</h3><p><span class="bold">Son rôle :</span> Antoine est un développeur concepteur Python. Il s\'occupe de la réalisation de l\'ensemble du back de l\'application. </p><p> <span class="bold">Ses passions :</span> Le riz/dinde et pousser à la salle.</p><p><span class="bold">Poisson ascendant ?</span>, rageux de base</p></div>';
