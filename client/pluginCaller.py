@@ -12,18 +12,28 @@ logger = Logger('PluginCaller', True)
 default_auth = Authentification('./../db/db.json', 'ALZq5qSa7V9HOwNyW3nPvOZBKIkce09CLmK9HnelIMA=')
 
 
+def get_modules():
+    #TODO : take data from folder
+    return [Weather(), Mail(), Joke()]
+
+
 class PluginCaller(object):
     """ """
 
     def __init__(self, auth_serv=default_auth):
         self.phrase = "default"
-        self.plugins = [Weather(), Mail(), Joke()]
+        self.plugins = get_modules();
         self.auth_service = auth_serv
 
     def execute(self, phrase, id_user='mail@mail.com'):
         self.phrase = phrase
         plugin_found_list = []
 
+        """ Special request """
+        if phrase == "get_modules_requirements":
+            return self.get_modules_requirements()
+
+        """ Plugin work """
         for plugin in self.plugins:
             for key_word in plugin.key_words:
                 if self.word_correspondence(key_word):
@@ -43,6 +53,9 @@ class PluginCaller(object):
             return json.dumps(
                 {'Plugin': 'Error', 'errorMessage': 'to much plugin selected', 'responseStatus': '500', 'data': '{}'})
 
+    def get_modules_requirements(self):
+        return {}
+
     def word_correspondence(self, key_word):
         return key_word in self.phrase
 
@@ -51,9 +64,9 @@ class PluginCaller(object):
 
 
 # #Phrase test pour weather
-print(PluginCaller().execute("weather in Paris"))
+# print(PluginCaller().execute("weather in Paris"))
 # #Phrase test pour les nouveaux mails
 # print(PluginCaller().execute("new mail ?"))
 # Phrase test envoie de mail après saisi textuelle
 # print(PluginCaller().execute("sendmail/#/antoine.gosset@outlook.fr/#/Test de sujet/#/Test de contenu et de /#/bug"))
-print(PluginCaller().execute("pls a new joke !! :)"))
+# print(PluginCaller().execute("pls a new joke !! :)"))
