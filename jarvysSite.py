@@ -3,6 +3,7 @@ from flask import Flask,render_template,request
 from flask_cors import CORS
 from textblob import TextBlob
 from client.pluginCaller import PluginCaller
+from client.Logger import Logger
 import os
 from deepspeech.model import Model
 import json as jsonp
