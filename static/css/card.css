@@ -164,6 +164,9 @@
   }
 
 
+  .card:hover {
+    cursor: pointer;
+  }
 
   .card:hover .avatar {
     animation:none;
@@ -282,7 +285,7 @@
 
   #mascotteKameRight{
     margin-top: 40%;
-    margin-left: 24%;
+    margin-left: 11%;
   }
 
   #mascotteKameLeft{

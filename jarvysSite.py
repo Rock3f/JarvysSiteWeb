@@ -3,6 +3,7 @@ from flask import Flask,render_template,request
 from flask_cors import CORS
 from textblob import TextBlob
 from client.pluginCaller import PluginCaller
+from client.Logger import Logger
 import os
 from deepspeech.model import Model
 import json as jsonp
@@ -10,6 +11,7 @@ import json as jsonp
 from sys import byteorder
 from array import array
 import scipy.io.wavfile as wav
+import urllib
 
 import subprocess
 
@@ -47,14 +49,42 @@ def upload():
 		blob = TextBlob(stt)
 		blob = blob.correct()
 		plugins = PluginCaller();
-		json = jsonp.loads(plugins.execute(str(blob)))
+		json = plugins.execute(str(blob))
 		json['sentence'] = str(blob)
-		print(str(blob))
 		return(jsonp.dumps(json))
 	else:
 		print(request.files)
 		print(request.values)
 		return('There was an error while the upload of your query')
+
+
+
+@app.route('/upload', methods=['GET'])
+def upload_text():
+	searchword = request.args.get('query', '')
+	if searchword !='':
+		oui = urllib.unquote(searchword).decode('UTF-8')
+		print(oui)
+		blob = TextBlob(oui)
+		blob = blob.correct()
+		plugins = PluginCaller();
+		json = plugins.execute(str(blob))
+		json['sentence'] = str(blob)
+		print(str(blob))
+		return(jsonp.dumps(json))
+	else:
+		return('There was an error while the upload of your query')
+
+
+
+
+@app.route('/joke', methods=['GET'])
+def joke():
+	plugins = PluginCaller();
+	json = jsonp.loads(plugins.execute(str("joke")))
+	json['sentence'] = str("joke")
+	print("Another joke please!")
+	return(jsonp.dumps(json))
 
 
 
