@@ -51,9 +51,9 @@ class PluginCaller(object):
 
 
 # #Phrase test pour weather
-print(PluginCaller().execute("weather in Paris"))
+# print(PluginCaller().execute("weather in Paris"))
 # #Phrase test pour les nouveaux mails
 # print(PluginCaller().execute("new mail ?"))
 # Phrase test envoie de mail après saisi textuelle
-# print(PluginCaller().execute("sendmail/#/antoine.gosset@outlook.fr/#/Test de sujet/#/Test de contenu et de /#/bug"))
-print(PluginCaller().execute("pls a new joke !! :)"))
+print(PluginCaller().execute("sendmail/#/antoine.gosset@outlook.fr/#/Test de sujet/#/Test de contenu et de /#/bug"))
+# print(PluginCaller().execute("pls a new joke !! :)"))
