@@ -315,12 +315,17 @@ h5 {
           width: 30%;
           margin-bottom: 8%;
       }
+
+      .welcome-thumb {
+        margin-left: 72% !important;
+        margin-top: -13% !important;
+      }
   }
 
   @media screen and (min-width: 200px) and (max-width: 991px) {
     .card    {
-       width: 320px;
-      height: 320px;
+        width: 250px ! important;
+        height: 320px !important;
     }
     .card:hover .profile{
     background: rgba(102,52,105,.7);
@@ -335,10 +340,11 @@ h5 {
     }
 
 
-      .col-md-6 .card {
-          margin-left: 23%;;
-          margin-top: 4%;
-      }
+    .col-md-6 .card {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+    }
 
 
       #waves {
@@ -365,6 +371,35 @@ h5 {
           padding: 80px 0px 0px 10px;
       }
 
+      .modal {
+        width: 100% !important;
+        height: initial !important;
+        display: block !important;
+        margin: auto !important;
+        position: relative !important;
+        top: 15% !important;
+        left:inherit !important;
+    }
+
+    .backgroundModal {
+        display: none;
+    }
+
+    #imageCorentinModal {
+        transform: initial !important;
+    }
+
+    .profileModal {
+        width: 30% !important;
+        position: relative !important;
+        left: 32px !important;
+        top: -20px !important;
+        margin-bottom: 10% !important;
+    }
+
+    .contentModal > p {
+        margin-left: -60%;
+    }
 
   }
 
