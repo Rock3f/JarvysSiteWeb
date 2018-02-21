@@ -67,7 +67,7 @@ class SendMail(object):
 
         return {'response': r, 'stored_data': {}}
 
-
+"""commentaire"""
 class Mail(object):
     """"""
 
