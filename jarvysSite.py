@@ -58,6 +58,16 @@ def upload():
 
 
 
+@app.route('/joke', methods=['GET'])
+def joke():
+	plugins = PluginCaller();
+	json = jsonp.loads(plugins.execute(str("joke")))
+	json['sentence'] = str("joke")
+	print("Another joke please!")
+	return(jsonp.dumps(json))
+
+
+
 @app.route('/pwa')
 def pwa():
 	return render_template('index.html')
