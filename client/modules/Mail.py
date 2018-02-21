@@ -17,7 +17,7 @@ class LastMail(object):
     def execute(self, phrase, user_data):
 
         mail_list = []
-        authentification = ('antoine.gosset@ynov.com', 'PM0153cf3246')
+        authentification = ('antoine.gosset@ynov.com', 'password')
 
         try:
             i = Inbox(auth=authentification, getNow=True)
