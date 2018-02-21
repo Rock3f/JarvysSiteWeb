@@ -58,6 +58,25 @@ def upload():
 
 
 
+@app.route('/upload', methods=['POST'])
+def upload():
+	searchword = request.args.get('query', '')
+	if searchword !='':
+		blob = TextBlob(searchword)
+		blob = blob.correct()
+		plugins = PluginCaller();
+		json = jsonp.loads(plugins.execute(str(blob)))
+		json['sentence'] = str(blob)
+		print(str(blob))
+		return(jsonp.dumps(json))
+	else:
+		print(request.files)
+		print(request.values)
+		return('There was an error while the upload of your query')
+
+
+
+
 @app.route('/joke', methods=['GET'])
 def joke():
 	plugins = PluginCaller();
