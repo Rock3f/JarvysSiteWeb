@@ -10,6 +10,7 @@ import json as jsonp
 from sys import byteorder
 from array import array
 import scipy.io.wavfile as wav
+import urllib
 
 import subprocess
 
@@ -58,17 +59,17 @@ def upload():
 
 
 
-@app.route('/upload', methods=['POST'])
-def upload():
+@app.route('/upload', methods=['GET'])
+def upload_text():
 	searchword = request.args.get('query', '')
 	if searchword !='':
-		blob = TextBlob(searchword)
+		blob = TextBlob(urllib.unquote(searchword).decode('UTF-8'))
 		blob = blob.correct()
 		plugins = PluginCaller();
 		json = jsonp.loads(plugins.execute(str(blob)))
 		json['sentence'] = str(blob)
 		print(str(blob))
-		return(jsonp.dumps(json))
+		return("jsonp.dumps(json)")
 	else:
 		print(request.files)
 		print(request.values)
