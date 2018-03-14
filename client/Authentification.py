@@ -21,8 +21,8 @@ def secure_decrypt(password, salt, value):
 
 class Authentification(object):
     """ This class is the main class to authenticate and store user data """
-
-    def __init__(self, db_file_path='./../db/db.json', salt=AEAD.generate_key().decode('utf-8'), pwd='+1j4@6T3UI7mk1Uqs'
+    ## AEAD.generate_key().decode('utf-8')
+    def __init__(self, db_file_path='./../db/db.json', salt="ALZq5qSa7V9HOwNyW3nPvOZBKIkce09CLmK9HnelIMA=", pwd='+1j4@6T3UI7mk1Uqs'
                                                                 'dqsdqdsqsd>/M;"tF#Qq@1I"G0$2Vdp+Qd-98"&U,MN&9&4H9_36Vj'):
         if not os.path.exists(os.path.dirname(db_file_path)):
             try:
